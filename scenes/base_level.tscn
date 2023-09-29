@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://wep7tw8u44tf" path="res://assets/sprites/Pixel Platformer/Tilemap/tiles_packed.png" id="1_rhp6r"]
 [ext_resource type="PackedScene" uid="uid://c5g5juqtr0txx" path="res://entities/player.tscn" id="2_lmjq1"]
-[ext_resource type="PackedScene" uid="uid://dwi57v0uwo2cp" path="res://Scenes/portal.tscn" id="3_3ctm2"]
+[ext_resource type="PackedScene" uid="uid://dwi57v0uwo2cp" path="res://scenes/portal.tscn" id="3_3ctm2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdacq"]
 texture = ExtResource("1_rhp6r")
@@ -647,7 +647,7 @@ layer_0/tile_data = PackedInt32Array(65536, 1114112, 0, 131072, 1114112, 2, 1966
 position = Vector2(63, 114)
 
 [node name="Portal" parent="." instance=ExtResource("3_3ctm2")]
-position = Vector2(296, 110)
+position = Vector2(297, 110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
 position = Vector2(0, -1)
