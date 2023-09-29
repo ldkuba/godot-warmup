@@ -9,7 +9,7 @@ size = Vector2(16, 16)
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_typwf")
 
-[node name="Character0000" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_y1qfn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
