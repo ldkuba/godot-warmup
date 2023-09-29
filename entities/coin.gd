@@ -14,4 +14,5 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		body.play_coin_sound()
+		PlayerData.increase_score()
 		queue_free()

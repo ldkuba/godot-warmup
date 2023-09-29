@@ -9,4 +9,4 @@ func get_score():
 	
 func increase_score():
 	score += 1
-	score_changed.emit(score)
+	score_changed.emit(score)		
