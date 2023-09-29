@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://du85lr4yvhbdt"]
+
+[ext_resource type="Texture2D" uid="uid://btgvbyd1fjv50" path="res://assets/sprites/Pixel Platformer/Tiles/tile_0151.png" id="1_lpbk3"]
+[ext_resource type="Script" path="res://entities/coin.gd" id="2_1l3vd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ruc7"]
+size = Vector2(12, 12)
+
+[node name="Collider" type="Area2D"]
+script = ExtResource("2_1l3vd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3ruc7")
+
+[node name="Coin" type="Sprite2D" parent="."]
+texture = ExtResource("1_lpbk3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

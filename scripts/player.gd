@@ -8,12 +8,18 @@ const JUMP_VELOCITY = -200.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var tex_standing = load("res://assets/sprites/Pixel Platformer/Characters/character_0000.png")
-var tex_standing_l = tex_standing.duplicate()
 var tex_jumping = load("res://assets/sprites/Pixel Platformer/Characters/character_0001.png")
-var tex_jumping_l = load("res://assets/sprites/Pixel Platformer/Characters/character_0001.png")
 
 var looking_left: bool
 var sprite_looking_left: bool
+
+var score = 0
+
+func get_score():
+	return score
+	
+func increase_score():
+	score += 1
 
 func _physics_process(delta):
 	if looking_left:
