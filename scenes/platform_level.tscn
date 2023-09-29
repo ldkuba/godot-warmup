@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ecve3jso6fqs"]
+[gd_scene load_steps=8 format=3 uid="uid://ecve3jso6fqs"]
 
 [ext_resource type="Texture2D" uid="uid://wep7tw8u44tf" path="res://assets/sprites/Pixel Platformer/Tilemap/tiles_packed.png" id="1_5qe7w"]
 [ext_resource type="PackedScene" uid="uid://c5g5juqtr0txx" path="res://entities/player.tscn" id="2_04va1"]
 [ext_resource type="PackedScene" uid="uid://du85lr4yvhbdt" path="res://entities/coin.tscn" id="3_6mngi"]
 [ext_resource type="PackedScene" uid="uid://bvcp8yulqjksu" path="res://entities/ui.tscn" id="4_rjuvy"]
+[ext_resource type="PackedScene" uid="uid://b5f52hdwrbb31" path="res://scenes/scene_transition.tscn" id="5_yt2ws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdacq"]
 texture = ExtResource("1_5qe7w")
@@ -648,3 +649,17 @@ position = Vector2(36, 103)
 position = Vector2(243, 45)
 
 [node name="UI" parent="." instance=ExtResource("4_rjuvy")]
+
+[node name="FadeUI" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="FadeControl" type="Control" parent="FadeUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SceneFadeTransition" parent="FadeUI/FadeControl" instance=ExtResource("5_yt2ws")]
+layout_mode = 1
