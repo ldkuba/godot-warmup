@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwi57v0uwo2cp"]
+
+[ext_resource type="Script" path="res://scripts/Portal.gd" id="1_a1350"]
+[ext_resource type="PackedScene" uid="uid://ecve3jso6fqs" path="res://scenes/platform_level.tscn" id="2_srokg"]
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_a1350")
+targetScene = ExtResource("2_srokg")
