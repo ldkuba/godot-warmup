@@ -11,6 +11,5 @@ func _update_score_label():
 	score_text.text = "Score: " + str(PlayerData.get_score())
 	
 func _on_collected(score: int) -> void:
-	print("_on_collected")
 	_update_score_label()
 	
