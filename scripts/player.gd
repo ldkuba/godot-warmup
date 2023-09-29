@@ -11,14 +11,7 @@ var tex_jumping = load("res://assets/sprites/Pixel Platformer/Characters/charact
 
 var looking_left: bool
 var sprite_looking_left: bool
-
-var score = 0
-
-func get_score():
-	return score
 	
-func increase_score():
-	score += 1
 @export var player_sounds: SoundManager
 
 func _physics_process(delta):
