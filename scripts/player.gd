@@ -14,6 +14,9 @@ var sprite_looking_left: bool
 	
 @export var player_sounds: SoundManager
 
+func play_coin_sound():
+	player_sounds.play_sound("coin")
+
 func _physics_process(delta):
 	if looking_left:
 		$Sprite.scale = Vector2(1, 1)
