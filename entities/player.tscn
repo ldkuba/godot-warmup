@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_typwf"]
 [ext_resource type="Texture2D" uid="uid://bekgq0dfxl8fa" path="res://assets/sprites/Pixel Platformer/Characters/character_0000.png" id="2_y1qfn"]
-[ext_resource type="Script" path="res://scripts/SSSoundManager.gd" id="3_a8sp5"]
+[ext_resource type="Script" path="res://scripts/SoundManager.gd" id="3_hc7np"]
 [ext_resource type="AudioStream" uid="uid://5c700dbvenyl" path="res://assets/sounds/footstep_carpet_004.ogg" id="4_444q5"]
 [ext_resource type="AudioStream" uid="uid://bgl0o3t5nheln" path="res://assets/sounds/woosh1.ogg" id="5_qin3y"]
 
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_18nr8")
 [node name="PlayerCamera" type="Camera2D" parent="."]
 
 [node name="AudioPlayers" type="Node" parent="."]
-script = ExtResource("3_a8sp5")
+script = ExtResource("3_hc7np")
 
 [node name="footsteps" type="AudioStreamPlayer" parent="AudioPlayers"]
 stream = ExtResource("4_444q5")

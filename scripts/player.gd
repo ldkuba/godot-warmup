@@ -19,7 +19,7 @@ func get_score():
 	
 func increase_score():
 	score += 1
-@export var player_sounds: SSSoundManager
+@export var player_sounds: SoundManager
 
 func _physics_process(delta):
 	if looking_left:

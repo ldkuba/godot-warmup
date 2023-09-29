@@ -1,6 +1,6 @@
 extends Node
 
-class_name SSSoundManager
+class_name SoundManager
 
 func get_sound(sound_name: String) -> AudioStreamPlayer:
 	for child in get_children():
