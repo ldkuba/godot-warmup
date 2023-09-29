@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="godot-warmup"
-run/main_scene="res://scenes/platform_level.tscn"
+run/main_scene="res://scenes/base_level.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/scale=4.0
+window/stretch/scale=3.0
 
 [rendering]
 
