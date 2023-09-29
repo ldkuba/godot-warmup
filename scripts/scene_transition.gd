@@ -7,7 +7,7 @@ class_name SceneFadeTransition
 func _ready() -> void:
 	# Plays the animation backward to fade in
 	_anim_player.play_backwards("Fade")
-	print("noo")
+	_anim_player.advance(0)
 
 func transition_to(_next_scene: PackedScene) -> void:
 	# Plays the Fade animation and wait until it finishes
@@ -15,4 +15,3 @@ func transition_to(_next_scene: PackedScene) -> void:
 	await _anim_player.animation_finished
 	# Changes the scene
 	get_tree().change_scene_to_packed(_next_scene)
-	print("yep")
