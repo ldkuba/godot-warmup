@@ -4,6 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_ketd2"]
 font_size = 8
+font_color = Color(0, 0, 0, 1)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_t3cv8")
