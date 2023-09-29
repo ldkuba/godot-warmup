@@ -27,8 +27,8 @@ script = ExtResource("3_hc7np")
 
 [node name="footsteps" type="AudioStreamPlayer" parent="AudioPlayers"]
 stream = ExtResource("4_444q5")
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="jump" type="AudioStreamPlayer" parent="AudioPlayers"]
 stream = ExtResource("5_qin3y")
-volume_db = -10.0
+volume_db = -20.0
