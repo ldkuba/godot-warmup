@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgy5hoj66d8rh"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c5psdl7bjh5n0"]
 
-[ext_resource type="Texture2D" uid="uid://wep7tw8u44tf" path="res://assets/sprites/Pixel Platformer/Tilemap/tiles_packed.png" id="1_rhp6r"]
-[ext_resource type="PackedScene" uid="uid://c5g5juqtr0txx" path="res://entities/player.tscn" id="2_lmjq1"]
-[ext_resource type="PackedScene" uid="uid://b5spkd3w8yqkq" path="res://scenes/portal.tscn" id="3_3ctm2"]
-[ext_resource type="PackedScene" uid="uid://b5f52hdwrbb31" path="res://scenes/scene_transition.tscn" id="4_f20wa"]
-[ext_resource type="PackedScene" uid="uid://c8jbtb1u6jfyh" path="res://scenes/parallax_background.tscn" id="4_wfcys"]
+[ext_resource type="Texture2D" uid="uid://wep7tw8u44tf" path="res://assets/sprites/Pixel Platformer/Tilemap/tiles_packed.png" id="1_qc5pq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdacq"]
-texture = ExtResource("1_rhp6r")
+texture = ExtResource("1_qc5pq")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -629,45 +625,7 @@ texture_region_size = Vector2i(18, 18)
 18:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:8/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSet" id="TileSet_phtmx"]
+[resource]
 tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qdacq")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwktn"]
-size = Vector2(20, 34)
-
-[node name="PlatformLevel" type="Node2D"]
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_phtmx")
-format = 2
-layer_0/name = "Ground"
-layer_0/tile_data = PackedInt32Array(65536, 1114112, 0, 131072, 1114112, 2, 196608, 1179648, 4, 65537, 1179648, 0, 393217, 1114112, 6, 458753, 131072, 1, 458754, 131072, 1, 458755, 131072, 1, 458756, 131072, 1, 458757, 131072, 1, 458758, 131072, 1, 458763, 131072, 1, 458764, 131072, 1, 458765, 131072, 1, 458766, 131072, 1, 458767, 131072, 1, 524288, 65536, 6, 131073, 1114112, 4, 196609, 1048576, 6, 262145, 1048576, 5, 327681, 1048576, 5, 524289, 131072, 6, 65538, 1245184, 0, 131074, 1245184, 2, 524290, 131072, 6, 524291, 131072, 6, 524292, 131072, 6, 524293, 131072, 6, 524294, 131072, 6, 524295, 131072, 6, 524296, 131072, 6, 524297, 131072, 6, 524298, 131072, 6, 524299, 131072, 6, 524300, 131072, 6, 524301, 131072, 6, 524302, 131072, 6, 524303, 131072, 6, 458768, 131072, 1, 524304, 131072, 6, 458762, 131072, 1, 458761, 131072, 1, 458760, 131072, 1, 458759, 131072, 1, 458752, 65536, 1, 393230, 327680, 4, 393226, 327680, 5, 393225, 327680, 5, 393224, 327680, 5, 393227, 393216, 5, 458769, 196608, 1, 524305, 196608, 6, 589841, 196608, 7, 589840, 131072, 7, 589839, 131072, 7, 589838, 131072, 7, 589837, 131072, 7, 589836, 131072, 7, 589835, 131072, 7, 589834, 131072, 7, 589833, 131072, 7, 589832, 131072, 7, 589831, 131072, 7, 589830, 131072, 7, 589829, 131072, 7, 589828, 131072, 7, 589827, 131072, 7, 589826, 131072, 7, 589825, 131072, 7, 589824, 65536, 7)
-
-[node name="Player" parent="." instance=ExtResource("2_lmjq1")]
-position = Vector2(63, 114)
-
-[node name="Portal" parent="." node_paths=PackedStringArray("sceneFadeTransition") instance=ExtResource("3_3ctm2")]
-position = Vector2(297, 110)
-sceneFadeTransition = NodePath("../FadeUI/FadeControl/SceneFadeTransition")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_qwktn")
-
-[node name="FadeUI" type="CanvasLayer" parent="."]
-layer = 3
-
-[node name="FadeControl" type="Control" parent="FadeUI"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SceneFadeTransition" parent="FadeUI/FadeControl" instance=ExtResource("4_f20wa")]
-layout_mode = 1
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("4_wfcys")]
