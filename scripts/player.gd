@@ -33,7 +33,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		$Sprite.texture = tex_jumping
-		player_sounds.play_sound("jump")
+		player_sounds.play_sound("jump", true)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

@@ -9,7 +9,8 @@ func get_sound(sound_name: String) -> AudioStreamPlayer:
 	push_error("player sound: " + sound_name + " not found")
 	return null
 
-func play_sound(sound_name: String):
+func play_sound(sound_name: String, force_restart: bool = false):
 	var sound = get_sound(sound_name)
-	if sound != null && !sound.is_playing():
-		sound.play()
+	if sound != null:
+		if(force_restart || !sound.is_playing()):
+			sound.play()
